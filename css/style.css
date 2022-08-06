@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #010202;
+    font-family: Source Sans Pro, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    width: 90%; /*адаптив - создание по краям отступа*/
+    max-width: 1800px;
+    margin: auto; /*равнение header по середине*/
+    padding: 56px 0;
+    display: flex; /*поставить в один ряд*/
+    justify-content: space-between; /*выровнять элементы по краям*/
+    align-items: center;
+}
+/*Лого-текст*/
+.logo {
+    display: block; /*блочная ссылка*/
+}
+.user {
+    display: flex;
+    align-items: center;
+}
+/*имя пользователя*/
+.user-name {
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 15px;
+}
+/*рисунок профиля*/
+.user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.app {
+    background: linear-gradient(90deg, #010202 0%, #010202 30%, rgba(1, 2, 2, 0.2) 70%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    min-height: 100vh;
+}
+.film {
+    width: 90%;
+    max-width: 1800px;
+    margin: auto;
+    padding: 7% 0;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    opacity: 0.5;
+    color: #e5e5e5;
+    font-size: 16px;
+    line-height: 140%;
+}
+.tags > * {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.age {
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 1px 5px;
+}
+.description {
+    max-width: 460px;
+    font-size: 21px;
+    line-height: 140%;
+    margin-bottom: 36px;
+    opacity: 0.5;
+    color: #e5e5e5;
+}
+.button {
+    padding: 11px 26px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    line-height: 140%;
+    background: #2f2f2f;
+    color: white;
+    cursor: pointer;
+}
+.button-primary {
+    background: #ea6e20;
+    margin-right: 15px;
+}
+.button-text {
+    margin-left: 10px;
+    vertical-align: text-bottom;
+}
+/*  Адаптив сайта  */
+@media (max-width: 1200px) {
+    /* .app {
+        background-size: 50%;
+    } */
+}
+@media (max-width: 768px) {
+    .app {
+        height: auto;
+        padding-bottom: 400px;
+        background: url('../img/9207c7fc38f4e8f.jpg') no-repeat bottom center / 300px;
+    }
+    video {
+        display: none;
+    }
+    .film {
+        padding-top: 2%;
+    }
+    .description {
+        font-size: 16px;
+        max-width: 300px;
+    }
+    .film-logo {
+        max-width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .button-text {
+        display: none;
+    }
+    .user-name {
+        display: none;
+    }
+    .app {
+        padding-bottom: 350px;
+        background-size: 300px;
+    }
+}
